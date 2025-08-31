@@ -6,7 +6,7 @@ class Usuario(models.Model):
     id_usuario = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=500,  null=False, blank=False)
     email = models.EmailField(max_length=254, unique=True,  null=False, blank=False)
-    password = models.CharField(max_length=200, null=False, blank=False)
+    contraseña = models.CharField(max_length=200, null=False, blank=False)
 
     class Meta:
         db_table = 'usuario'
