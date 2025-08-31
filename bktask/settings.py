@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -74,8 +75,12 @@ WSGI_APPLICATION = 'bktask.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'prueba',          # Nombre de la BD
+        'USER': 'postgres',        # Usuario de PostgreSQL
+        'PASSWORD': '1234',# Contraseña del usuario
+        'HOST': 'localhost',     # O IP del servidor si está en otra máquina
+        'PORT': '5432',          # Puerto por defecto de PostgreSQL
     }
 }
 
